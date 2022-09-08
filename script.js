@@ -1,3 +1,5 @@
+
+//? CREACIÓN DE LA FUNCIÓN PRINCIPAL 
 $(function () {
     function c() {
     p();
@@ -44,15 +46,15 @@ $(function () {
     }
     }
     function d() {
-    var t;
-    var n = $("#calendar").css("width", e + "px");
-    n.find((t = "#calendar_weekdays, #calendar_content"))
-    .css("width", e + "px")
-    .find("div")
-    .css({
-    width: e / 7 + "px",
-    height: e / 7 + "px",
-    "line-height": e / 7 + "px",
+        var t;
+        var n = $("#calendar").css("width", e + "px");
+        n.find((t = "#calendar_weekdays, #calendar_content"))
+        .css("width", e + "px")
+        .find("div")
+        .css({
+        width: e / 7 + "px",
+        height: e / 7 + "px",
+        "line-height": e / 7 + "px",
     });
     n.find("#calendar_header")
     .css({ height: e * (1 / 7) + "px" })
@@ -60,21 +62,21 @@ $(function () {
     .css("line-height", e * (1 / 7) + "px");
     }
     function v(e, t) {
-    return new Date(e, t, 0).getDate();
+        return new Date(e, t, 0).getDate();
     }
     function m(e, t, n) {
-    return new Date(e, t - 1, n).getDay();
+        return new Date(e, t - 1, n).getDay();
     }
     function g(e) {
-    return y(new Date()) == y(e);
+        return y(new Date()) == y(e);
     }
     function y(e) {
-    return e.getFullYear() + "/" + (e.getMonth() + 1) + "/" + e.getDate();
+        return e.getFullYear() + "/" + (e.getMonth() + 1) + "/" + e.getDate();
     }
     function b() {
-    var e = new Date();
-    t = e.getFullYear();
-    n = e.getMonth() + 1;
+        var e = new Date();
+        t = e.getFullYear();
+        n = e.getMonth() + 1;
     }
     var e = 480;
     var t = 2013;
@@ -139,20 +141,20 @@ $(function () {
     a.find('i[class^="icon-chevron"]').on("click", function () {
     var e = $(this);
     var r = function (e) {
-    n = e == "next" ? n + 1 : n - 1;
-    if (n < 1) {
-    n = 12;
-    t--;
-    } else if (n > 12) {
-    n = 1;
-    t++;
-    }
-    c();
+        n = e == "next" ? n + 1 : n - 1;
+        if (n < 1) {
+            n = 12;
+            t--;
+        } else if (n > 12) {
+            n = 1;
+            t++;
+        }
+        c();
     };
     if (e.attr("class").indexOf("left") != -1) {
-    r("previous");
+        r("previous");
     } else {
-    r("next");
+        r("next");
     }
     });
     });
